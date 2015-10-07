@@ -111,8 +111,8 @@ var CustomShaders = function(){
 			"  // hsv.g = mod(hsv.g, 1.0);",
 			"  vec3 rgb = hsv2rgb(hsv); ",
 
-			"  gl_FragColor = vec4(rgb,1.0);",
-			// "  gl_FragColor = vec4(tex0.rgb,1.0);",
+			// "  gl_FragColor = vec4(rgb,1.0);",
+			"  gl_FragColor = vec4(tex0.rgb,1.0);",
 			"}"
 		
 		].join("\n")
@@ -423,7 +423,7 @@ var CustomShaders = function(){
 			"    vec2 offs = vec2(look.y-look.x,look.w-look.z)*vec2(mouse.x/50.0, mouse.y/50.0);",
 			"    vec2 coord = offs+tc;",
 			"    vec4 repos = texture2D(texture, coord);",
-			"    repos*=1.001;",
+			// "    repos*=1.01;",
 			"    gl_FragColor = repos;",
 			"} "
 		
@@ -670,7 +670,7 @@ var CustomShaders = function(){
 				"resolution"  : { type: "v2", value: null },
 				"time"  : { type: "f", value: null },
 				"lightWidth"  : { type: "f", value: 9.5 },
-				"lightBrightness"  : { type: "f", value: 1.0 }
+				"lightBrightness"  : { type: "f", value: 1.5 }
 			}
 		] ),
 

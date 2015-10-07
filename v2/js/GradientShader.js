@@ -32,8 +32,13 @@ function GradientShader(){
 			"	if(mod(gl_FragCoord.x, 0.03) == 0.0){",
 			"		if(mod(gl_FragCoord.y, 0.03) == 0.0){",
 			// "			gl_FragColor = vec4(uv,0.5+0.5*sin(time),1.0);",
+			// "			gl_FragColor = texture2D(texture, uv);",
+			"			gl_FragColor = vec4(0.5,0.5,0.5,1.0);",
+			"		} else {",
 			"			gl_FragColor = texture2D(texture, uv);",
 			"		}",
+			"	} else {",
+			"		gl_FragColor = texture2D(texture, uv);",
 			"	}",
 			"}"
 		
